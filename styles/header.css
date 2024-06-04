@@ -1,0 +1,132 @@
+
+
+header {
+  position:fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 100px;
+  transition: 0.5s;
+  background-color: #44161e;
+  height: 80px;
+}
+.logo {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.logo img{
+  padding-left: 100px;
+  width: 200px;
+  height: 90px;
+}
+
+.navbar {
+display: flex;
+column-gap: 5rem;
+}
+.navbar li{
+position: relative;
+list-style-type: none;
+font-weight: bolder;
+}
+.navbar a {
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  }
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 5px;
+    background: #dd003f;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+ }
+
+.navbar a:hover::after, 
+.navbar .home-active::after{
+      width: 100%;
+} 
+
+#menu-icon{
+font-size: 24px;
+cursor: pointer;
+z-index: 1000001;
+display: none;
+}
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  background: #dd003f;
+  color: white;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: 0.5s;
+
+  }
+  .btn:hover {
+  background: greenyellow;
+  font-weight: bolder;
+  }
+
+  @media (max-width: 991px){
+   header {
+    padding: 18px 4%;
+
+   }
+ }
+
+  @media (max-width: 774px){
+
+    header {
+      padding: 12px 4%;
+  
+     }
+     #menu-icon {
+    display: initial;
+    color: white;
+    }
+    .navbar {
+      position: absolute;
+      top: -570px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      row-gap: 1.4rem;
+      padding: 20px;
+      box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+      transition: 0.2s all linear;
+      text-align: center;
+    }
+    .navbar a { 
+      width: 100%;
+      color: black;
+
+    }
+    .navbar a:hover{
+      color: #dd003f;
+      border-bottom: 3px solid #dd003f;
+    }
+    .navbar a::after{
+      display: none;
+    }
+    .navbar .active{
+      top: 100%;
+      display: initial;
+    }
+ 
+  }
